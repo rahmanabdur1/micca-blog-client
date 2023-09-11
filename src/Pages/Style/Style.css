@@ -1,0 +1,23 @@
+.style{
+    max-width: 650px;
+    margin: auto;
+}
+.styleGuideTitle{
+    text-align: center;
+}
+.container-img{
+    height: 800px;
+    width: 100%;
+}
+.wider-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh; 
+ }
+ 
+ .wider-container-img {
+    max-width: 800px;
+ }
+ 

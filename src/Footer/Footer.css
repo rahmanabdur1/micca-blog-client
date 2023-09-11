@@ -1,0 +1,80 @@
+.footer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 150px;
+    margin-bottom: 100px;
+    max-width: 1160px;
+    gap: 10px;
+    margin: auto;
+}
+
+
+.micc {
+    flex: 2;
+}
+
+.miccaTitle{
+    text-align: start;
+    font-size: 32px;
+    color:#000000;
+    font-weight: 600;
+}
+
+.miccaDetail{
+    text-align: start;
+    color: #4d4d4d;
+}
+.category {
+    flex: 2;
+}
+
+.btn {
+    flex-wrap: wrap;
+    gap: 7px;
+    display: flex;
+}
+
+.btn button {
+    border: 2px solid black;
+    border-radius: 23px;
+    padding: 5px 8px;
+    font-size: 13px;
+    color: #4d4d4d;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.btn button:hover {
+    background-color: black;
+    color: white;
+}
+
+.footerlinks {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.link {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.follow {
+    flex: 1;
+}
+
+.folllowIcon {
+    display: flex;
+    gap: 10px;
+    flex-direction: row;
+}
+
+@media (max-width: 568px) {
+    .footer {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+}

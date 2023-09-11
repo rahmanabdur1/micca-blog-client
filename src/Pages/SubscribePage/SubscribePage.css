@@ -1,0 +1,8 @@
+.subscribe{
+    display: flex;
+    gap: 100px;
+    justify-content: space-between;
+    max-width: 1150px;
+    margin-top: 50px;
+    margin: auto;
+}

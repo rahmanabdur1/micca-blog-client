@@ -1,0 +1,28 @@
+
+.singleauth img{
+    border-radius: 100%;
+    width: 100%;
+    object-fit: cover;
+    height: 180px;
+}
+.singleauth h2 ,p{
+    text-align: center;
+}
+.singleauth p{
+    font-size: 18px;
+    font-weight: 500;
+    color: #4d4d4d;
+}
+.singleauth h2{
+    color: #4d4d4d;
+    font-size: 25px;
+    font-family: 'Gill Sans', Calibri;
+}
+
+@media (max-width: 567px) {
+    .singleauth img {  
+      width: 40%;
+      display: block;
+      margin: auto;
+    }
+}

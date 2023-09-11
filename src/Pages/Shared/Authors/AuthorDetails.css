@@ -1,0 +1,10 @@
+.authPosts{
+    display: grid;
+    gap: 30px;
+    grid-template-columns: repeat(3, 1fr);
+}
+.authPosts img{
+    width: 100%;
+    object-fit: cover;
+    height: 290px;
+}

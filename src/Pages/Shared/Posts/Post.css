@@ -1,0 +1,53 @@
+.postContainer {
+    max-width: 1100px;
+    margin: auto;
+}
+
+.post {
+    display: grid;
+    gap: 30px;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.postDetails p {
+    text-align: start;
+}
+
+.singlePost {
+    max-width: 760px;
+    margin: auto;
+    margin-bottom: 100px;
+    margin-bottom: 100px;
+}
+
+.singlePost img {
+    width: 100%;
+    object-fit: cover;
+    height: 560px;
+}
+
+.relatedPostTitle {
+    font-weight: 550;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 22px;
+    text-align: start;
+}
+
+.relatedPostDetails {
+    color: #4d4d4d;
+    text-align: start;
+}
+
+.post img {
+    width: 100%;
+    object-fit: cover;
+    height: 290px;
+}
+
+@media only screen and (max-width: 500px) {
+    .post {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+
+    }
+}

@@ -1,0 +1,9 @@
+.dark {
+    background-color: #333;
+    color: white;
+    padding-left: 20px;
+}
+
+.dark a {
+    color: white;
+}

@@ -1,0 +1,34 @@
+ .bg{
+    max-width: 1140px;
+    margin: auto;
+    margin-top: 70px;
+    margin-bottom: 70px;
+ }
+ 
+ h1{
+    font-size: 55px;
+    font-family: serif;
+    font-weight: 700;
+    color: #262626;
+}
+span{
+    font-weight: 400;
+    color: #4d4d4d;
+    font-size: 53px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+@media (max-width: 568px) {
+    .bg{
+        margin: auto;
+        margin: 10px;
+     }
+    .bg h1{
+        font-size:32px;
+        color: #4d4d4d;
+    }
+    .bg span{
+        font-size:27px;
+        color: #4d4d4d;
+    }
+}

@@ -1,0 +1,92 @@
+.header {
+    height: 80px;
+    display: flex;
+    color: black;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 60px;
+    padding-right: 60px;
+    transition: all 0.3s ease-in-out;
+}
+
+.header.active {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.header.dark .mobile-toggle {
+    color: white;
+}
+
+
+ .miccaNav a{
+    font-size: 32px;
+    color:#000000;
+    font-weight: 600;
+    text-decoration: none;
+ }
+.links {
+    display: flex;
+    align-items: center;
+}
+
+.links a {
+    text-decoration: none;
+    color: #4d4d4d;
+    font-size: 17px;
+    margin-right: 36px;
+}
+
+
+.mobile-toggle {
+    display: none;
+    cursor: pointer;
+    font-size: 20px;
+    color: black;
+    margin-right: 20px;
+}
+
+@media (max-width: 568px) {
+    .header {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .header.dark {
+        background-color: #333;
+        color: white;
+    }
+
+
+    .header.dark .mobile-toggle {
+        color: white;
+    }
+
+    .mobile-toggle {
+        display: block;
+    }
+    .links a{
+        width: 100%;
+        padding-top:10px ;
+    }
+    .links {
+        display: none;
+        border-radius: 5px;
+    }
+    .links.active{
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            position: absolute;
+            border-radius: 2px solid round;
+            gap: 10px;
+            padding-left: 30px;
+            height: 250px;
+            width: 140px;
+            right: 8px;
+            top: 70px;
+            background-color: rgb(255 255 255);
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+            z-index: 99;
+    }
+
+}
