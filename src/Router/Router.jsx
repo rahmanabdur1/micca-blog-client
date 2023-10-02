@@ -9,6 +9,7 @@ import Post from "../Pages/Shared/Posts/Post";
 import AuthorDetails from "../Pages/Shared/Authors/AuthorDetails";
 import Authors from "../Pages/Shared/Authors/Authors";
 import ErrorPage from "../Pages/Shared/ErrorPage/ErrorPage";
+import PaginationPost from "../Pages/Home/PaginationPost/PaginationPost";
 
 
 
@@ -17,10 +18,10 @@ export const router = createBrowserRouter([
     path: '/',
     element: (
       <>
-        <Main />     
+        <Main />
       </>
     ),
-    errorElement: <ErrorPage/>,
+    errorElement: <ErrorPage />,
     children: [
       {
         path: '/',
@@ -39,8 +40,12 @@ export const router = createBrowserRouter([
         element: <AllPages />
       },
       {
-        path:'/author',
-        element:<Authors/>
+        path: '/paginat',
+        element: <PaginationPost />
+      },
+      {
+        path: '/author',
+        element: <Authors />
       },
       {
         path: 'author/:id',
@@ -51,8 +56,8 @@ export const router = createBrowserRouter([
         element: <Posts />
       },
       {
-        path:'/blog/:id',
-        element:<Post/>
+        path: '/blog/:id',
+        element: <Post />
       }
 
     ]

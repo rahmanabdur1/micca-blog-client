@@ -1,0 +1,40 @@
+.pages-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 100px 30px 0px 30px;
+    gap: 20px;
+
+}
+
+.pages-container a {
+    font-weight: 600;
+    font-family: sans-serif;
+    font-size: 20px;
+    color: #404040;
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom-color .5s;
+}
+
+.pages-container a:hover {
+    border-bottom-color: #404040;
+}
+
+/* dark mode */
+
+.dark .pages-container a {
+    color: white;
+}
+
+.dark .pages-container a:hover {
+    border-bottom-color: #e1e1e1;
+}
+
+
+@media only screen and (max-width: 600px) {
+    .pages-container{
+        display: flex;
+        flex-direction: column;
+    }
+}

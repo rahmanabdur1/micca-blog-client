@@ -1,34 +1,77 @@
- .bg{
-    max-width: 1140px;
-    margin: auto;
-    margin-top: 70px;
-    margin-bottom: 70px;
- }
- 
- h1{
+.bg {
+    margin: 70px 30px 0px 30px ;
+}
+
+h1 {
     font-size: 55px;
-    font-family: serif;
+    font-family: sans-serif;
     font-weight: 700;
     color: #262626;
 }
-span{
+
+span {
     font-weight: 400;
-    color: #4d4d4d;
     font-size: 53px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: sans-serif;
+    color: #4d4d4d;
 }
 
-@media (max-width: 568px) {
-    .bg{
-        margin: auto;
-        margin: 10px;
-     }
-    .bg h1{
-        font-size:32px;
+.dark .bg h1 {
+    color: white;
+}
+
+.dark .bg span {
+    color: white;
+}
+
+/* responsive in mobile and tablet */
+
+@media only screen and (max-width:800px) {
+    .bg {
+        margin: 30px 20px 0px 20px ;
+    }
+
+    .bg h1 {
+        font-size: 35px;
         color: #4d4d4d;
     }
-    .bg span{
-        font-size:27px;
+
+    .bg span {
+        font-size: 26px;
         color: #4d4d4d;
+    }
+
+    .dark h1 {
+        color: white;
+    }
+
+    .dark span {
+        color: white;
+    }
+
+}
+
+
+@media (max-width: 560px) {
+    .bg {
+        margin: 20px 20px 0px 20px ;
+    }
+
+    .bg h1 {
+        font-size: 30px;
+        color: #4d4d4d;
+    }
+
+    .bg span {
+        font-size: 24px;
+        color: #4d4d4d;
+    }
+
+    .dark h1 {
+        color: white;
+    }
+
+    .dark span {
+        color: white;
     }
 }

@@ -1,12 +1,16 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import './Contact.css'
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons';
+import { ThemeContext } from '../../context/ThemeContext';
 
 const Contact = () => {
+    const { theme} = useContext(ThemeContext);
+
     return (
-        <div>
+        <div className={`contact-container ${theme ? 'dark' : ''}`}>
             <h1 className='title'>Get In Touch</h1>
-            <p className='titleInfo'>Sint eiusmod enim proident irure voluptate aliquip laboris in duis in esse.</p>
+            <p className='title-info'>Sint eiusmod enim proident irure voluptate aliquip laboris in duis in esse.</p>
             <div className='content'>
                 <form className='form'>
                     <input type="text" placeholder="name" className='input' />
@@ -19,9 +23,6 @@ const Contact = () => {
                     ></textarea>
                     <button className='button'>Send</button>
                 </form>
-                <div className='contactInfo'>
-                   <h2>Contact Info</h2>
-                </div>
             </div>
         </div>
     );

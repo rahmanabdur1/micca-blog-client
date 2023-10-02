@@ -1,16 +1,22 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Outlet } from 'react-router-dom';
 import Navbar from '../Pages/Shared/Navbar/Navbar';
-import Footer from '../Footer/Footer';
-import { useTheme } from '../ThemeContext/ThemeContext';
+
+import { ThemeContext } from '../context/ThemeContext';
+import Subscribe from '../Pages/Subscribe/Subscribe';
+import Footer from '../Pages/Footer/Footer';
+import FooterReserved from '../Pages/Footer/FooterReserved';
+
 
 const Main = () => {
-    const { isDarkMode} = useTheme();
+    const { theme } = useContext(ThemeContext);
     return (
-        <div className={`App ${isDarkMode ? 'dark' : ''}`}>
-            <Navbar/>
-            <Outlet/>
-            <Footer/>
+        <div className={theme ? 'dark' : ''}>
+            <Navbar />
+            <Outlet />
+            <Subscribe />
+            <Footer />
+            <FooterReserved/>
         </div>
     );
 };

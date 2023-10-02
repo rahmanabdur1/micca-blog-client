@@ -1,12 +1,13 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import './Post.css'
-
+import { ThemeContext } from '../../../context/ThemeContext';
 
 const Post = () => {
   const { id } = useParams();
   const [post, setPost] = useState(null);
   const [relatedPosts, setRelatedPosts] = useState([]);
+  const { theme } = useContext(ThemeContext);
 
   useEffect(() => {
     fetch(`http://localhost:5000/blog/${id}`)
@@ -30,35 +31,31 @@ const Post = () => {
     window.scrollTo(0, 0);
   };
 
+  
   return (
-    <div className='postContainer'>
-      <div className='singlePost'>
-        <h3>{post.title}</h3>
+    <div className={`post-container ${theme ? 'dark' : ''}`}>
+      <div className={`single-post ${theme ? 'dark' : ''}`}>
+        <span className='category-name'>{post.category_name}</span>
+        <h2>{post.title}</h2>
         <p>{post.author.name}</p>
         <img src={post?.img} alt='blog img' />
         <p>{post.des}</p>
       </div>
       <h2>Related Posts</h2>
-      <div className='post'>
+      <div className='related-posts'>
         {relatedPosts.map(relatedPost => (
-          <div key={relatedPost._id}>
+          <div key={relatedPost._id} style={{ marginRight: '10px' }}>
             <Link to={`/blog/${relatedPost?._id}`} onClick={scrollToTop}>
               <img className='img' src={relatedPost?.img} alt='blog img' />
             </Link>
-            <div className='relatedPost'>
-              <p className='relatedPostTitle'>{relatedPost.title}</p>
-              <p className='relatedPostDetails'>{relatedPost.des}</p>
-            </div>
-
-            <div className="authors">
-              {relatedPost.author.map(postAuthor => (
-                <div className="" key={postAuthor._id}>
-                  <Link to={`/author/${postAuthor._id}`} style={{ textDecoration: 'none' }} onClick={scrollToTop}> <p>{postAuthor.name}</p></Link>
-                </div>
-              ))}
+              <div className='related-post'>
+                <div className='post-title-des'>
+                <span className='post-title'> {relatedPost.title}</span>
+              </div>
             </div>
           </div>
         ))}
+
       </div>
     </div>
   );

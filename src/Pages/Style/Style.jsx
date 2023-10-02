@@ -1,14 +1,18 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import './Style.css'
 import img1 from '../../imges/img1.jpg.webp'
 import img2 from '../../imges/img2.jpg'
 import fullimg from '../../imges/full-img.jpg'
+import { ThemeContext } from '../../context/ThemeContext';
+
 const Style = () => {
+
+
     return (
-        <div className='style-guide'>
-            <div className='style'>
-                <div className=''>
-                    <h1 className='styleGuideTitle'>Style guide</h1>
+        <div  className='style-guide'>
+            <div  className='style'>
+                <div className='styleGuide'>
+                    <h1>Style guide</h1>
                     <p>Praesent ullamcorper tellus nec tincidunt volutpat. Vivamus tempor egestas justo eu lobortis. Etiam malesuada eleifend urna vel pretium. Etiam eu lorem vulputate, egestas ante pharetra, facilisis lectus. Integer tortor lectus, lacinia non vulputate ut, dignissim a felis. Sed purus lectus, ultricies et urna sit amet, maximus cursus ipsum. Vivamus ut luctus urna, ut efficitur sapien. Vivamus erat nibh, iaculis et imperdiet in, luctus vitae felis.</p>
                 </div>
                 <div className='heading-1'>
@@ -54,16 +58,13 @@ const Style = () => {
                     <h2>Images</h2>
                     <p>Sed tincidunt hendrerit metus, sit amet molestie urna vestibulum sed. Donec mollis blandit pharetra. Aliquam efficitur scelerisque urna, sit amet mollis augue.</p>
                     <img className='container-img' src={img1} />
-                    <h4>100% of the container</h4>
                 </div>
             </div>
             <div>
                 <div class="wider-container">
                     <img src={img2} class="wider-container-img" />
-                    <h4>Wider than the container</h4>
                 </div>
                 <img className='full-screen-img' src={fullimg} />
-                <h4>Full Screen width</h4>
             </div>
         </div>
     );

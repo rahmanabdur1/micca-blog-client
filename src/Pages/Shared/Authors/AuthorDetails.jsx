@@ -1,11 +1,13 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import './AuthorDetails.css'
+import { ThemeContext } from '../../../context/ThemeContext';
 
 const AuthorDetails = () => {
   const { id } = useParams();
   const [author, setAuthor] = useState(null);
   const [authorCategories, setAuthorCategories] = useState([]);
+  const { theme } = useContext(ThemeContext);
 
   useEffect(() => {
     fetch(`http://localhost:5000/author/${id}`)
@@ -28,30 +30,35 @@ const AuthorDetails = () => {
   };
 
   return (
-    <div>
+    <div className='author-details-container'>
       {author && (
-        <div>
+        <div className={`author-details ${theme ? 'dark' : ''}`} >
+          <img src={author.img} alt={author.name} />
           <h2>{author.name}</h2>
+          <p> {author.posts} Posts</p>
           <p>{author.title}</p>
-          {/* <img src={author.img} alt={author.name} /> */}
-          <p>Number of Posts: {author.posts}</p>
         </div>
       )}
-      <div>
-        <h3>Author Categories:</h3>
-        {authorCategories.length > 0 ? (
-          <ul className='authPosts'>
-            {authorCategories.map(category => (
-              <li key={category._id}>
-                <p>{category.name}</p>
-                <Link to={`/blog/${category?._id}`} onClick={scrollToTop}>
-                  <img src={category.img}  alt={`${category.title} Image`} />
-                </Link>
-                <p>{category.des}</p>
 
-              </li>
+      <div className='auth-posts'>
+        {authorCategories.length > 0 ? (
+          <div className='auth-post'>
+            {authorCategories.map(category => (
+              <div key={category._id}>
+                <Link to={`/blog/${category?._id}`} onClick={scrollToTop}>
+                  <img src={category.img} alt={`${category.title} Image`} />
+                </Link>
+                <div className='post-category_name-time'>
+                  <span >{category.category_name}</span>
+                  <span >{category.time}</span>
+                </div>
+                <div className='post-title-des'>
+                  <span > {category.title}</span>
+                  <span >{category.des}</span>
+                </div>
+              </div>
             ))}
-          </ul>
+          </div>
         ) : (
           <p>No categories found for this author.</p>
         )}
