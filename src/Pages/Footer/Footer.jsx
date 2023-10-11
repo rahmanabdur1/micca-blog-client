@@ -8,7 +8,7 @@ const Footer = () => {
     const { theme} = useContext(ThemeContext);
 
     useEffect(() => {
-        fetch('http://localhost:5000/news-categories')
+        fetch('http://localhost:5000/blogs-categories')
             .then((res) => res.json())
             .then((data) => {
                 setCategories(data);
@@ -28,9 +28,9 @@ const Footer = () => {
                 <p >Sint culpa irure nostrud duis irure pariatur Lorem mollit mollit nulla duis id ut enim est sit nostrud magna mollit.</p>
             </div>
 
-            <div className="category">
+            <div className="categories">
                 <h5>CATEGORIES</h5>
-                <div className="category-btn">
+                <div className="category">
                     {categories.map((category) => (
                         <Link key={category.id} to={`/category/${category.id}`} onClick={scrollToTop}>
                             <button>

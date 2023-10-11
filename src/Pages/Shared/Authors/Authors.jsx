@@ -2,20 +2,22 @@ import React, { useContext, useEffect, useState } from 'react';
 import './Authors.css';
 import Author from './Author';
 import { ThemeContext } from '../../../context/ThemeContext';
+import useTitle from '../../../hook/useTitle';
 
 const Authors = () => {
     const [authors, setAuthors] = useState([]);
     const { theme} = useContext(ThemeContext);
 
     useEffect(() => {
-        fetch('http://localhost:5000/author')
+        fetch('http://localhost:5000/authors')
           .then(response => response.json())
           .then(data => setAuthors(data))
           .catch(error => console.error('Error fetching authors:', error));
       }, []);
 
-      return(
+      useTitle("authors");
 
+      return(
         <div className={`auth-container ${theme ? 'dark' : ''}`}>
             <div className='auth-info'>
                 <h1>Meet Our Authors</h1>

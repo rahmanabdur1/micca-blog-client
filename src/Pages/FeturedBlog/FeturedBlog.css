@@ -1,44 +1,43 @@
-.feturedposts-container {
-    margin: 70px 30px 0px 30px ;
+.feturedblogs-container {
+    margin: 70px 30px 0px 30px;
 }
 
-.fetured-posts {
+.fetured-blogs {
     display: flex;
     gap: 40px;
 }
 
-.feture-post_title {
-    color: #808080;
+.feture-posttitle {
     font-size: 15px;
     font-family: sans-serif;
     word-spacing: 2px;
     letter-spacing: 2px;
-    margin-bottom:15px;
+    margin-bottom: 15px;
+    color: #808080;
 }
 
+
 /* 
-.left-feturedpost ,post-name-time */
+.left-feturedblog ,blog-name-time */
 
-
-
-.left-feturedpost {
+.left-feturedblog {
     flex: 2;
 }
 
-.left-feturedpost img {
+.left-feturedblog img {
     width: 100%;
     height: 600px;
     object-fit: cover;
 }
 
-.leftpost-name-time {
+.leftblog-categoryname-time {
     display: flex;
     align-items: center;
     gap: 20px;
     margin-top: 20px;
 }
 
-.leftpost-name-time span:nth-child(1) {
+.leftblog-categoryname-time span:nth-child(1) {
     font-size: 12px;
     font-family: sans-serif;
     border: 1px solid #4d4d4d;
@@ -46,26 +45,23 @@
     padding: 6px 6px;
     color: black;
     background-color: transparent;
+    text-transform: uppercase;
     cursor: pointer;
 }
 
-.leftpost-name-time:hover span:nth-child(1) {
+.leftblog-categoryname-time span:nth-child(1):hover{
     background-color: black;
     color: white;
 }
 
-.leftpost-name-time span:nth-child(2) {
+.leftblog-categoryname-time span:nth-child(2) {
     color: black;
     font-size: 14px;
     font-family: sans-serif;
 }
 
 
-.leftpost-des p {
-    text-align: start;
-}
-
-.leftpost-des p:nth-child(1) {
+.leftblog-title-des h2 {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 30px;
     font-weight: 700;
@@ -73,7 +69,7 @@
     color: #333333;
 }
 
-.leftpost-des p:nth-child(2) {
+.leftblog-title-des p {
     font-weight: 500;
     font-size: 18px;
     margin-top: 15px;
@@ -84,30 +80,30 @@
 
 
 /* 
-.right-feturedpost ,post-name-time */
+.right-feturedpost ,blog-name-time */
 
-.right-feturedpost {
+.right-feturedblog {
     flex: 1;
 }
 
-.productivity-category_post {
+.productivity-categoryblog {
     margin-top: 30px;
 }
 
-.right-feturedpost img {
+.right-feturedblog img {
     width: 100%;
     height: 250px;
     object-fit: cover;
 }
 
-.rightpost-name-time {
+.rightblog-categoryname-time {
     display: flex;
     align-items: center;
     gap: 20px;
     margin-top: 20px;
 }
 
-.rightpost-name-time span:nth-child(1) {
+.rightblog-categoryname-time span:nth-child(1) {
     font-size: 12px;
     font-family: sans-serif;
     border: 1px solid #4d4d4d;
@@ -115,26 +111,27 @@
     padding: 4px 6px;
     color: black;
     background-color: transparent;
+    text-transform: uppercase;
     cursor: pointer;
 }
 
-.rightpost-name-time:hover span:nth-child(1) {
+.rightblog-categoryname-time span:nth-child(1):hover {
     background-color: black;
     color: white;
 }
 
-.rightpost-name-time span:nth-child(2) {
+.rightblog-categoryname-time span:nth-child(2) {
     color: black;
     font-size: 14px;
     font-family: sans-serif;
 }
 
 
-.rightpost-des p {
+.rightblog-title-des p {
     text-align: start;
 }
 
-.rightpost-des p:nth-child(1) {
+.rightblog-title-des h3 {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 22px;
     font-weight: 700;
@@ -142,7 +139,7 @@
     color: #333333;
 }
 
-.rightpost-des p:nth-child(2) {
+.rightblog-title-des p {
     font-weight: 500;
     font-size: 15px;
     margin-top: 15px;
@@ -154,109 +151,85 @@
 
 /* dark mode */
 
-.dark .feture-post_title{
-    color: #e1e1e1;
-}
-
-.dark .leftpost-name-time span:nth-child(1) {
+.dark .feture-posttitle,
+.dark .leftblog-categoryname-time span:nth-child(1),
+.dark .leftblog-title-des h2,
+.dark .rightblog-categoryname-time span:nth-child(1) {
     color: white;
 }
 
-.dark .leftpost-name-time span:nth-child(1):hover {
+.dark .leftblog-categoryname-time span:nth-child(1):hover,
+.dark .rightblog-categoryname-time span:nth-child(1):hover {
     background-color: white;
     color: black;
 }
 
-.dark .leftpost-name-time span:nth-child(2) {
+.dark .leftblog-categoryname-time span:nth-child(2),
+.dark .rightblog-categoryname-time span:nth-child(2),
+.dark .rightblog-title-des p,
+.dark .leftblog-title-des p:nth-child(2) {
     color: #e1e1e1;
 }
 
-.dark .leftpost-des p:nth-child(1) {
+.dark .rightblog-title-des h3 {
     color: white;
 }
 
-.dark .leftpost-des p:nth-child(2) {
-    color: #e1e1e1;
-}
 
-
-.dark .rightpost-name-time span:nth-child(1) {
-    color: white;
-}
-
-.dark .rightpost-name-time span:nth-child(1):hover {
-    background-color: white;
-    color: black;
-}
-
-.dark .rightpost-name-time span:nth-child(2) {
-    color: #e1e1e1;
-}
-
-.dark .rightpost-des p:nth-child(1) {
-    color: white;
-}
-
-.dark .rightpost-des p:nth-child(2) {
-    color: #e1e1e1;
-}
-
-
-
+/* responsive in mobile and tablet */
 
 @media only screen and (max-width: 900px) {
-    .feturedposts-container {
+    .feturedblogs-container {
         margin: 25px;
         margin-top: 50px;
     }
 
-    .fetured-posts {
+    .fetured-blogs {
         display: flex;
         flex-direction: column;
         gap: 30px;
     }
 
-    .left-feturedpost img {
+    .left-feturedblog img {
         width: 100%;
         object-fit: cover;
         height: 600px;
     }
-    .leftpost-des p:nth-child(1) {
+
+    .leftblog-title-des h2 {
         font-family: Arial, Helvetica, sans-serif;
         font-size: 23px;
         font-weight: 700;
         margin-top: 15px;
-        color: #333333;
     }
-    
-    .leftpost-des p:nth-child(2) {
+
+    .leftblog-title-des p {
         font-weight: 500;
         font-size: 15px;
         margin-top: 15px;
-        line-height: 1.6;
+        line-height: 1.4;
         font-family: Arial, Helvetica, sans-serif;
-        color: #808080;
     }
-    
 
-    .right-feturedpost {
+
+    .right-feturedblog {
         display: flex;
         flex-direction: row;
         gap: 30px;
         flex: 1;
     }
 
-    .right-feturedpost img{
+    .right-feturedblog img {
         width: 100%;
         object-fit: cover;
         height: 250px;
     }
 
-    .lifelessons-category_post{
-          flex: 1;
+    .lifelessons-categoryblog {
+        flex: 1;
     }
 
-    .productivity-category_post {
+    .productivity-categoryblog {
         flex: 1;
         margin-top: 0;
     }
@@ -266,28 +239,28 @@
 
 
 @media only screen and (max-width: 650px) {
-    .feturedposts-container {
+    .feturedblogs-container {
         margin: 20px;
         margin-top: 50px;
     }
 
-    .fetured-posts {
+    .fetured-blogs {
         display: flex;
         flex-direction: column;
     }
 
-    .right-feturedpost {
+    .right-feturedblog {
         display: flex;
         flex-direction: column;
     }
 
-    .left-feturedpost img {
+    .left-feturedblog img {
         height: 250px;
         width: 100%;
         object-fit: cover;
     }
 
-    .right-feturedpost img {
+    .right-feturedblog img {
         width: 100%;
         object-fit: cover;
         height: 250px;

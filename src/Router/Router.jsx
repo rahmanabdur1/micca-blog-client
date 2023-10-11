@@ -4,12 +4,13 @@ import Home from "../Pages/Home/Home";
 import Contact from "../Pages/Contact/Contact";
 import Style from "../Pages/Style/Style";
 import AllPages from "../Pages/AllPage/AllPages";
-import Posts from "../Pages/Shared/Posts/Posts";
-import Post from "../Pages/Shared/Posts/Post";
+
 import AuthorDetails from "../Pages/Shared/Authors/AuthorDetails";
 import Authors from "../Pages/Shared/Authors/Authors";
 import ErrorPage from "../Pages/Shared/ErrorPage/ErrorPage";
-import PaginationPost from "../Pages/Home/PaginationPost/PaginationPost";
+import PaginationPost from "../Pages/Home/PaginationBlog/PaginationBlog";
+import Blog from "../Pages/Shared/Blogs/Blog";
+import Blogs from "../Pages/Shared/Blogs/Blogs";
 
 
 
@@ -44,20 +45,20 @@ export const router = createBrowserRouter([
         element: <PaginationPost />
       },
       {
-        path: '/author',
+        path: '/authors',
         element: <Authors />
       },
       {
-        path: 'author/:id',
+        path: 'author/:authId',
         element: <AuthorDetails />
       },
       {
         path: '/category/:id',
-        element: <Posts />
+        element: <Blogs/>
       },
       {
         path: '/blog/:id',
-        element: <Post />
+        element: <Blog/>
       }
 
     ]

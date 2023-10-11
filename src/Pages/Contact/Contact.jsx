@@ -3,10 +3,13 @@ import './Contact.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons';
 import { ThemeContext } from '../../context/ThemeContext';
+import useTitle from '../../hook/useTitle';
 
 const Contact = () => {
     const { theme} = useContext(ThemeContext);
 
+    useTitle("contact");
+    
     return (
         <div className={`contact-container ${theme ? 'dark' : ''}`}>
             <h1 className='title'>Get In Touch</h1>

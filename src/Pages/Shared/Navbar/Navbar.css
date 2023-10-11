@@ -6,7 +6,6 @@
     margin-left: 38px;
     margin-right: 38px;
     color: black;
-    transition: all 0.3s ease-in-out;
 }
 
 
@@ -59,12 +58,13 @@
 
 
 
-.theme-toggle {
+.theme-toggle{
     border: 2px solid #e1e1e1;
     border-radius: 20px;
     padding: 2px 4px;
     cursor: pointer;
 }
+
 
 
 /* responsive in mobile and tablet */

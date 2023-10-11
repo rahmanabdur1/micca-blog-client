@@ -2,101 +2,99 @@
     margin: 70px 30px 0px 30px;
 }
 
-
-
 .style {
-    max-width: 620px;
+    max-width: 700px;
     margin: auto;
 }
 
-.styleGuide h1 {
+.style-guide h1 {
     text-align: center;
     color: black;
-    font-size:45px;
+    font-size: 45px;
     font-family: sans-serif;
-    font-weight:750;
+    font-weight: 750;
 
 }
 
-.styleGuide p {
-    color:#696969;
+.style-guide p {
+    color: #696969;
     font-size: 16px;
     font-family: sans-serif;
     text-align: start;
     line-height: 1.4;
     margin-top: 50px;
-    word-spacing:3px;
+    word-spacing: 3px;
 }
 
 .heading-1 h1 {
     font-size: 46px;
     font-family: system-ui;
-    font-weight:800;
+    font-weight: 800;
     margin-top: 40px;
 }
 
 .heading-1 p {
-    color:#696969;
+    color: #696969;
     font-size: 16px;
     font-family: sans-serif;
     text-align: start;
     line-height: 1.4;
     margin-top: 30px;
-    word-spacing:3px;
+    word-spacing: 3px;
 }
 
 .heading-2 h2 {
     font-size: 26px;
     font-family: system-ui;
-    font-weight:650;
+    font-weight: 650;
     margin-top: 40px;
-    color:#333333;
+    color: #333333;
 }
 
 .heading-2 p {
-    color:#696969;
+    color: #696969;
     font-size: 16px;
     font-family: sans-serif;
     text-align: start;
     line-height: 1.4;
     margin-top: 30px;
-    word-spacing:3px;
+    word-spacing: 3px;
 }
 
-.heading-3 h3{
+.heading-3 h3 {
     font-size: 23px;
     font-family: system-ui;
-    font-weight:650;
+    font-weight: 650;
     margin-top: 40px;
-    color:#333333;
+    color: #333333;
 }
 
 .heading-3 p {
-    color:#696969;
+    color: #696969;
     font-size: 16px;
     font-family: sans-serif;
     text-align: start;
     line-height: 1.4;
     margin-top: 30px;
-    word-spacing:3px;
+    word-spacing: 3px;
 }
 
 .heading-4 h4 {
     font-size: 19px;
     font-family: system-ui;
-    font-weight:650;
+    font-weight: 650;
     margin-top: 40px;
-    color:#333333;
+    color: #333333;
 }
 
 .heading-4 p {
-    color:#696969;
+    color: #696969;
     font-size: 16px;
     font-family: sans-serif;
     text-align: start;
     line-height: 1.4;
     margin-top: 30px;
-    word-spacing:3px;
+    word-spacing: 3px;
 }
 
 .emphasis-text {
@@ -106,13 +104,13 @@
 .emphasis-text h2 {
     color: #000000;
     font-family: sans-serif;
-    margin-top:25px;
+    margin-top: 25px;
 }
 
 .emphasis-text h3 {
     font-size: 16px;
     font-family: sans-serif;
-    margin-top:25px;
+    margin-top: 25px;
     color: #999999;
 }
 
@@ -126,42 +124,53 @@
 }
 
 .lists h2 {
-    color: #000000;
+    color: #333333;
     font-family: sans-serif;
     margin-top: 50px;
 }
 
-.lists ul {
-    color:#696969;
+.lists li {
+    color: #696969;
     font-size: 16px;
     font-family: sans-serif;
-    text-align: start;
+    align-items: center;
     line-height: 1.4;
     margin-top: 20px;
-    word-spacing:3px;
+    word-spacing: 3px;
 }
+
+.lists ul li{
+    margin-left: 30px;
+    padding-left: 10px;
+}
+
+.lists ol li{
+    margin-left: 28px;
+    padding-left: 6px;
+}
+
 
 .images {
     margin-top: 50px;
 }
 
 .images h2 {
-    color: #000000;
+    color: #333333;
     font-family: sans-serif;
 }
 
 .images p {
-    color:#696969;
+    color: #696969;
     font-size: 16px;
     font-family: sans-serif;
     text-align: start;
     line-height: 1.4;
     margin-top: 30px;
-    word-spacing:3px;
+    word-spacing: 3px;
 }
 
 .container-img {
-    width: 800px;
+    width: 700px;
     height: auto;
     margin-top: 50px;
     max-width: 100%;
@@ -169,11 +178,9 @@
 
 .wider-container {
     display: flex;
-    justify-content: center;
-    flex-direction: column;
     align-items: center;
-    margin-top: 20px;
-    height: auto;
+    justify-content: center;
+    margin-top: 50px;
 }
 
 .wider-container-img {
@@ -182,19 +189,226 @@
     max-width: 100%;
 
 }
-.full-screen-img{
-    margin-top: 20px;
+
+.full-screen-img {
+    margin-top: 50px;
     max-width: 100%;
 }
 
-.dark .style {
+
+
+/* dark mode */
+
+.dark .style-container h1,
+.dark .style-container h2,
+.dark .style-container h3,
+.dark .style-container h4 ,
+.dark .style-container p ,
+.dark .style-container ul {
     color: white;
 }
 
+.dark .style-container p ,
+.dark .style-container li {
+    color:#f2f2f2;
+}
+
+
+/* responsive in mobile and tablet */
 
 
 @media only screen and (max-width: 570px) {
-    .style-guide{
-        margin:20px;
+    .style-guide {
+        margin: 20px;
+    }
+    .style-guide h1 {
+        text-align: center;
+        color: black;
+        font-size: 35px;
+        font-family: sans-serif;
+        font-weight: 750;
+    
+    }
+    
+    .style-guide p {
+        color: #696969;
+        font-size: 15px;
+        font-family: sans-serif;
+        text-align: start;
+        line-height: 1.4;
+        margin-top: 50px;
+        word-spacing: 3px;
+    }
+    
+    .heading-1 h1 {
+        font-size: 40px;
+        font-family: system-ui;
+        font-weight: 800;
+        margin-top: 40px;
+    }
+    
+    .heading-1 p {
+        color: #696969;
+        font-size: 15px;
+        font-family: sans-serif;
+        text-align: start;
+        line-height: 1.4;
+        margin-top: 30px;
+        word-spacing: 3px;
+    }
+    
+    .heading-2 h2 {
+        font-size: 24px;
+        font-family: system-ui;
+        font-weight: 650;
+        margin-top: 40px;
+        color: #333333;
+    }
+    
+    .heading-2 p {
+        color: #696969;
+        font-size: 15px;
+        font-family: sans-serif;
+        text-align: start;
+        line-height: 1.4;
+        margin-top: 30px;
+        word-spacing: 3px;
+    }
+    
+    .heading-3 h3 {
+        font-size: 20px;
+        font-family: system-ui;
+        font-weight: 650;
+        margin-top: 40px;
+        color: #333333;
+    }
+    
+    .heading-3 p {
+        color: #696969;
+        font-size: 15px;
+        font-family: sans-serif;
+        text-align: start;
+        line-height: 1.4;
+        margin-top: 30px;
+        word-spacing: 3px;
+    }
+    
+    .heading-4 h4 {
+        font-size: 18px;
+        font-family: system-ui;
+        font-weight: 650;
+        margin-top: 40px;
+        color: #333333;
+    }
+    
+    .heading-4 p {
+        color: #696969;
+        font-size: 15px;
+        font-family: sans-serif;
+        text-align: start;
+        line-height: 1.4;
+        margin-top: 30px;
+        word-spacing: 3px;
+    }
+    
+    .emphasis-text {
+        margin-top: 50px;
+    }
+    
+    .emphasis-text h2 {
+        color: #000000;
+        font-family: sans-serif;
+        font-size: 18px;
+        margin-top: 22px;
+    }
+    
+    .emphasis-text h3 {
+        font-size: 14px;
+        font-family: sans-serif;
+        margin-top: 25px;
+        color: #999999;
+    }
+    
+    .emphasis-text h3:nth-child(3) {
+        font-style: italic;
+        color: #000000;
+    }
+    
+    .lists {
+        margin-top: 50px;
+    }
+    
+    .lists h2 {
+        color: #333333;
+        font-family: sans-serif;
+        font-size: 19px;
+        margin-top: 50px;
+    }
+    
+    .lists li {
+        color: #696969;
+        font-size: 15px;
+        font-family: sans-serif;
+        align-items: center;
+        line-height: 1.4;
+        margin-top: 20px;
+        word-spacing: 3px;
+    }
+    
+    .lists ul li{
+        margin-left: 30px;
+        padding-left: 10px;
+    }
+    
+    .lists ol li{
+        margin-left: 28px;
+        padding-left: 6px;
+    }
+    
+    
+    .images {
+        margin-top: 50px;
+    }
+    
+    .images h2 {
+        color: #333333;
+        font-family: sans-serif;
+        font-size: 19px;
+    }
+    
+    .images p {
+        color: #696969;
+        font-size: 15px;
+        font-family: sans-serif;
+        text-align: start;
+        line-height: 1.4;
+        margin-top: 30px;
+        word-spacing: 3px;
+    }
+    
+    .container-img {
+        width: 700px;
+        height: auto;
+        margin-top: 50px;
+        max-width: 100%;
+    }
+    
+    .wider-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 50px;
+    }
+    
+    .wider-container-img {
+        width: 850px;
+        height: auto;
+        max-width: 100%;
+    
+    }
+    
+    .full-screen-img {
+        margin-top: 50px;
+        max-width: 100%;
     }
 }

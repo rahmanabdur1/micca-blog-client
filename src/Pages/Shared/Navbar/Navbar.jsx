@@ -25,7 +25,7 @@ const Navbar = () => {
             <div className={`micca-links ${showMenu ? 'active' : ''}`}>
                 <Link to="/">Home</Link>
                 <Link to="/style">Style Guide</Link>
-                <Link to="/author">Authors</Link>
+                <Link to="/authors">Authors</Link>
                 <Link to="/contact">Contact</Link>
                 <Link to='/pages'>Pages</Link>
                 <button onClick={handleToggleTheme} className="theme-toggle">

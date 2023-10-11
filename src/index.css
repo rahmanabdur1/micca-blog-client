@@ -5,5 +5,14 @@
 }
 
 .dark{
+    z-index: -1;
     background-color: black;
+}
+
+
+.loading{
+    text-align: center;
+    font-size: 18px;
+    font-family: sans-serif;
+    margin-top: 100px;
 }
