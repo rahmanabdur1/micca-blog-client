@@ -16,10 +16,6 @@ const Footer = () => {
     }, []);
 
 
-    const scrollToTop = () => {
-        window.scrollTo(0, 0);
-    };
-
 
     return (
         <div className={`footer ${theme ? 'dark' : ''}`}>
@@ -32,7 +28,7 @@ const Footer = () => {
                 <h5>CATEGORIES</h5>
                 <div className="category">
                     {categories.map((category) => (
-                        <Link key={category.id} to={`/category/${category.id}`} onClick={scrollToTop}>
+                        <Link key={category.id} to={`/category/${category.id}`}>
                             <button>
                                 {category.name}
                             </button>
@@ -42,7 +38,7 @@ const Footer = () => {
             </div>
             <div className="footerlinks">
                 <h5>LINKS</h5>
-                <div className="link" onClick={scrollToTop}>
+                <div className="link">
                     <Link to="/">Home</Link>
                     <Link to="/style">Style guide</Link>
                     <Link to="/contact">Contact</Link>

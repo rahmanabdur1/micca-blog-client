@@ -55,7 +55,6 @@ function FeturedBlog() {
       })
       .then((data) => {
         setProductivityBlog(data);
-        console.log(data, 'data')
       })
       .catch((error) => {
         console.error(error.message);
@@ -80,7 +79,7 @@ function FeturedBlog() {
                 <img src={blog?.img} alt="blog img" onClick={scrollToTop} />
               </Link>
               <div className='leftblog-categoryname-time'>
-                <Link to={`/category/${blog.category}`} style={{ textDecoration: 'none' }} onClick={scrollToTop}>
+                <Link to={`/category/${blog?.category}`} style={{ textDecoration: 'none' }} onClick={scrollToTop}>
                   <span>{blog.category_name}</span>
                 </Link>
                 <span >{blog.time}</span>
@@ -101,7 +100,7 @@ function FeturedBlog() {
                   <img src={blog?.img} alt="blog img" onClick={scrollToTop} />
                 </Link>
                 <div className='rightblog-categoryname-time'>
-                  <Link to={`/category/${blog.category}`} style={{ textDecoration: 'none' }} onClick={scrollToTop}>
+                  <Link to={`/category/${blog?.category}`} style={{ textDecoration: 'none' }} onClick={scrollToTop}>
                     <span>{blog.category_name}</span>
                   </Link>
                   <span>{blog.time}</span>
@@ -121,7 +120,7 @@ function FeturedBlog() {
                   <img src={blog?.img} alt="blog img" onClick={scrollToTop} />
                 </Link>
                 <div className='rightblog-categoryname-time'>
-                  <Link to={`/category/${blog.category}`} style={{ textDecoration: 'none' }} onClick={scrollToTop}>
+                  <Link to={`/category/${blog?.category}`} style={{ textDecoration: 'none' }} onClick={scrollToTop}>
                     <span>{blog.category_name}</span>
                   </Link>
                   <span>{blog.time}</span>

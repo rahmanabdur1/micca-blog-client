@@ -67,7 +67,7 @@ const AuthorDetails = () => {
                 </Link>
                  <div className='blog-info'>
                   <div className='blog-categoryname-time'>
-                    <Link to={`/category/${category.category}`} style={{ textDecoration: 'none' }}>
+                    <Link to={`/category/${category?.category}`} style={{ textDecoration: 'none' }}>
                       <span>{category.category_name}</span>
                     </Link>
                     <span>{category.time}</span>
@@ -78,9 +78,9 @@ const AuthorDetails = () => {
                   </div>
                   <div className='blog-authors-info'>
                     <div className='blog-authors'>
-                      {category.author.map((author, index) => (
+                      {category.author.map((author) => (
                           <div className='blog-author' key={author.authId}>
-                          <Link to={`/author/${author.authId}`}  style={{ textDecoration: 'none' }}>
+                          <Link to={`/author/${author?.authId}`}  style={{ textDecoration: 'none' }}>
                             <img
                               src={author.img}
                               alt={`Image of ${author.name}`}

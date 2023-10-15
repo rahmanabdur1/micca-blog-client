@@ -15,7 +15,6 @@ const Blog = () => {
       .then(res => res.json())
       .then(data => {
         setPost(data);
-        console.log(data, 'da')
       });
 
     fetch(`http://localhost:5000/blog/${id}/related`)
@@ -23,6 +22,7 @@ const Blog = () => {
       .then(data => {
         setRelatedPosts(data);
       });
+
     window.scrollTo(0, 0);
   }, [id]);
 
@@ -47,8 +47,8 @@ const Blog = () => {
         <div className='blog-authors-des'>
           <div className='blog-authors'>
             {blog.author.map((author) => (
-              <div key={author.authId}>
-                <Link  to={`/author/${author.authId}`} style={{ textDecoration: 'none' }}>
+              <div className='blog-author' key={author.authId}>
+                <Link  to={`/author/${author?.authId}`} style={{ textDecoration: 'none' }}>
                   <img
                     src={author.img}
                     alt={`Image of ${author.name}`}

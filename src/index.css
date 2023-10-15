@@ -5,9 +5,10 @@
 }
 
 .dark{
-    z-index: -1;
     background-color: black;
+    overflow: visible;
 }
+
 
 
 .loading{
@@ -16,3 +17,4 @@
     font-family: sans-serif;
     margin-top: 100px;
 }
+

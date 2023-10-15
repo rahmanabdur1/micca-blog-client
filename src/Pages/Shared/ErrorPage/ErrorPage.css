@@ -1,0 +1,18 @@
+.errorpage{
+    margin-top: 200px;
+    text-align: center;
+    gap: 20px;
+}
+
+.errorpage h2{
+    font-family: sans-serif;
+    color:#4d4d4d;
+    margin-bottom: 20px;
+}
+
+.errorpage a{
+    font-family: sans-serif;
+    color:orangered;
+    text-decoration: none;
+    font-size: 22px;
+}
